@@ -10,3 +10,7 @@
 *.lai
 *.la
 *.a
+
+.DS_Store
+
+BnutLibrary.xcodeproj/project.xcworkspace/xcuserdata/andrew.xcuserdatad/UserInterfaceState.xcuserstate
