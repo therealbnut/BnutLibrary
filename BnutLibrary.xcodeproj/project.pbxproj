@@ -15,6 +15,7 @@
 		49C426EF1556582200CBB587 /* CompactList_unit_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C426EE1556582200CBB587 /* CompactList_unit_tests.cpp */; };
 		49C426F01556588400CBB587 /* FString_unit_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C426EC155657EB00CBB587 /* FString_unit_tests.cpp */; };
 		49C426F11556588800CBB587 /* UniTest_unit_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C426ED155657EB00CBB587 /* UniTest_unit_tests.cpp */; };
+		49C426F815566C3200CBB587 /* Vec2_unit_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C426F715566C3200CBB587 /* Vec2_unit_tests.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,8 @@
 		49C426EC155657EB00CBB587 /* FString_unit_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FString_unit_tests.cpp; sourceTree = "<group>"; };
 		49C426ED155657EB00CBB587 /* UniTest_unit_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UniTest_unit_tests.cpp; sourceTree = "<group>"; };
 		49C426EE1556582200CBB587 /* CompactList_unit_tests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CompactList_unit_tests.cpp; sourceTree = "<group>"; };
+		49C426F6155665DD00CBB587 /* Vec2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vec2.h; sourceTree = "<group>"; };
+		49C426F715566C3200CBB587 /* Vec2_unit_tests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec2_unit_tests.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				49C426B81555153300CBB587 /* BL.h */,
+				49C426F6155665DD00CBB587 /* Vec2.h */,
 				49C426E0155616EE00CBB587 /* FString.h */,
 				49C426DC1555FE2000CBB587 /* UnitTest.h */,
 				49C426B91555153300CBB587 /* CompactList.h */,
@@ -140,6 +144,7 @@
 			children = (
 				49C426EE1556582200CBB587 /* CompactList_unit_tests.cpp */,
 				49C426EC155657EB00CBB587 /* FString_unit_tests.cpp */,
+				49C426F715566C3200CBB587 /* Vec2_unit_tests.cpp */,
 				49C426ED155657EB00CBB587 /* UniTest_unit_tests.cpp */,
 			);
 			path = "Unit Tests";
@@ -229,6 +234,7 @@
 				49C426EF1556582200CBB587 /* CompactList_unit_tests.cpp in Sources */,
 				49C426F01556588400CBB587 /* FString_unit_tests.cpp in Sources */,
 				49C426F11556588800CBB587 /* UniTest_unit_tests.cpp in Sources */,
+				49C426F815566C3200CBB587 /* Vec2_unit_tests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

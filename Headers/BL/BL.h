@@ -12,6 +12,7 @@
 #include <BL/CompactList.h>
 #include <BL/FString.h>
 #include <BL/UnitTest.h>
+#include <BL/Vec2.h>
 
 namespace BL
 {

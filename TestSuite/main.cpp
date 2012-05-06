@@ -13,6 +13,7 @@ void all_tests(BL::UnitTest& unit_test)
     BL::CompactList<int>::RunUnitTests();
     BL::UnitTest::RunUnitTests();
     BL::FString::RunUnitTests();
+    BL::Vec2f::RunUnitTests();
 }
 
 int main(int argc, const char * argv[])
