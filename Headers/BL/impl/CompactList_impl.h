@@ -10,8 +10,6 @@
 #define BnutLibrary_CompactList_impl_h
 
 #include <iostream>
-
-#include <cassert>
 #include <vector>
 #include <deque>
 
@@ -152,8 +150,9 @@ namespace BL
         {
             const size_t  z = this->_size();
             const size_t oz = this->m_objects.size();
-            assert(z <= this->m_objects.size());
-            
+
+            BLAssert(z <= this->m_objects.size(), "Compacted object count exceeds capacity");
+
             std::deque<size_t>::iterator u,
             ub = this->m_unusedObj.begin(),
             ue = this->m_unusedObj.end();
@@ -166,7 +165,7 @@ namespace BL
                 if (*u >= z)
                     continue;
                 while (r != re && !(*r >= z && *r < oz)) ++r;
-                assert(r != re);
+                BLAssert(r != re, "Invalid internal state, should not reach last reference");
                 this->m_objects[*u] = this->m_objects[*r];
                 std::swap(*r, *u);
                 ++r;
@@ -202,27 +201,27 @@ namespace BL
         void _destroy(const _weak_reference& that)
         {
             size_t object_index;
-            assert(that.m_list == this);
-            assert(that.m_index < this->m_references.size());
+            BLAssert(that.m_list == this, "Using _destroy with reference from wrong list");
+            BLAssert(that.m_index < this->m_references.size(), "Reference index out of bounds");
 
             object_index = this->m_references[that.m_index];
-            assert(object_index < this->m_objects.size());
+            BLAssert(object_index < this->m_objects.size(), "Object index out of bounds");
             this->m_references[that.m_index] = (size_t)-1;
             this->m_unusedRef.push_back(that.m_index);
             this->m_unusedObj.push_back(object_index);
         }
         void _retain(const _weak_reference& that) const
         {
-            assert(that.m_list == this);
-            assert(that.m_index < this->m_references.size());
-            assert(this->m_references[that.m_index] != (size_t)-1);
+            BLAssert(that.m_list == this, "Using _retain with reference from wrong list");
+            BLAssert(that.m_index < this->m_references.size(), "Reference index out of bounds");
+            BLAssert(this->m_references[that.m_index] != (size_t)-1, "Using invalid reference");
             ++this->m_referenceCounts[that.m_index];
         }
         void _release(const _weak_reference& that) const
         {
-            assert(that.m_list == this);
-            assert(that.m_index < this->m_referenceCounts.size());
-            assert(this->m_referenceCounts[that.m_index] > 0);
+            BLAssert(that.m_list == this, "Using _release with reference from wrong list");
+            BLAssert(that.m_index < this->m_references.size(), "Reference index out of bounds");
+            BLAssert(this->m_referenceCounts[that.m_index] > 0, "Using invalid reference");
             --this->m_referenceCounts[that.m_index];
             if (this->m_referenceCounts[that.m_index] == 0)
             {
@@ -231,12 +230,12 @@ namespace BL
         }
         _object * _at(const _weak_reference& that) const
         {
-            assert(that.m_list == this);
-            assert(that.m_index < this->m_references.size());
-            
+            BLAssert(that.m_list == this, "Using _at with reference from wrong list");
+            BLAssert(that.m_index < this->m_references.size(), "Reference index out of bounds");
+
             size_t object_index = this->m_references[that.m_index];
-            assert(object_index < this->m_objects.size());
-            
+            BLAssert(object_index < this->m_objects.size(), "Object index out of bounds");
+
             return const_cast<_object*>(&this->m_objects[object_index]);
         }
 

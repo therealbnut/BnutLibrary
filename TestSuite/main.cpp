@@ -6,13 +6,18 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#include "test_suite.h"
+#include <BL/BL.h>
 
-#include <iostream>
+void all_tests(BL::UnitTest& unit_test)
+{
+    BL::CompactList<int>::RunUnitTests();
+    BL::UnitTest::RunUnitTests();
+    BL::FString::RunUnitTests();
+}
 
 int main(int argc, const char * argv[])
 {
-    compact_list_test();
+    BL::UnitTest::RunSuite(all_tests);
 
     return EXIT_SUCCESS;
 }

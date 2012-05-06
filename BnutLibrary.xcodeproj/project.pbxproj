@@ -9,7 +9,12 @@
 /* Begin PBXBuildFile section */
 		49C426B5155514D700CBB587 /* version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C426B4155514D700CBB587 /* version.cpp */; };
 		49C426CD15551BE700CBB587 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C426CB15551BAA00CBB587 /* main.cpp */; };
-		49C426D1155524AA00CBB587 /* compact_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C426CF1555244500CBB587 /* compact_list.cpp */; };
+		49C426DA1555299C00CBB587 /* libBnutLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C426AA1555149300CBB587 /* libBnutLibrary.a */; };
+		49C426DE1556079C00CBB587 /* UnitTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C426DD1556079C00CBB587 /* UnitTest.cpp */; };
+		49C426E315561C9900CBB587 /* FString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C426E215561C9900CBB587 /* FString.cpp */; };
+		49C426EF1556582200CBB587 /* CompactList_unit_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C426EE1556582200CBB587 /* CompactList_unit_tests.cpp */; };
+		49C426F01556588400CBB587 /* FString_unit_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C426EC155657EB00CBB587 /* FString_unit_tests.cpp */; };
+		49C426F11556588800CBB587 /* UniTest_unit_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49C426ED155657EB00CBB587 /* UniTest_unit_tests.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,8 +37,15 @@
 		49C426BB155517FC00CBB587 /* CompactList_impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompactList_impl.h; sourceTree = "<group>"; };
 		49C426C115551B9A00CBB587 /* bl_test_suite */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bl_test_suite; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C426CB15551BAA00CBB587 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		49C426CE1555241F00CBB587 /* test_suite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test_suite.h; sourceTree = "<group>"; };
-		49C426CF1555244500CBB587 /* compact_list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = compact_list.cpp; sourceTree = "<group>"; };
+		49C426DC1555FE2000CBB587 /* UnitTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitTest.h; sourceTree = "<group>"; };
+		49C426DD1556079C00CBB587 /* UnitTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UnitTest.cpp; sourceTree = "<group>"; };
+		49C426DF1556128200CBB587 /* UnitTest_impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitTest_impl.h; sourceTree = "<group>"; };
+		49C426E0155616EE00CBB587 /* FString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FString.h; sourceTree = "<group>"; };
+		49C426E115561C4E00CBB587 /* FString_impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FString_impl.h; sourceTree = "<group>"; };
+		49C426E215561C9900CBB587 /* FString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FString.cpp; sourceTree = "<group>"; };
+		49C426EC155657EB00CBB587 /* FString_unit_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FString_unit_tests.cpp; sourceTree = "<group>"; };
+		49C426ED155657EB00CBB587 /* UniTest_unit_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UniTest_unit_tests.cpp; sourceTree = "<group>"; };
+		49C426EE1556582200CBB587 /* CompactList_unit_tests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CompactList_unit_tests.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49C426DA1555299C00CBB587 /* libBnutLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				49C426B4155514D700CBB587 /* version.cpp */,
+				49C426DD1556079C00CBB587 /* UnitTest.cpp */,
+				49C426E215561C9900CBB587 /* FString.cpp */,
+				49C426EB155657EB00CBB587 /* Unit Tests */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -93,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				49C426B81555153300CBB587 /* BL.h */,
+				49C426E0155616EE00CBB587 /* FString.h */,
+				49C426DC1555FE2000CBB587 /* UnitTest.h */,
 				49C426B91555153300CBB587 /* CompactList.h */,
 				49C426BA155517EE00CBB587 /* impl */,
 			);
@@ -102,6 +120,8 @@
 		49C426BA155517EE00CBB587 /* impl */ = {
 			isa = PBXGroup;
 			children = (
+				49C426E115561C4E00CBB587 /* FString_impl.h */,
+				49C426DF1556128200CBB587 /* UnitTest_impl.h */,
 				49C426BB155517FC00CBB587 /* CompactList_impl.h */,
 			);
 			path = impl;
@@ -110,11 +130,19 @@
 		49C426BC15551B7300CBB587 /* TestSuite */ = {
 			isa = PBXGroup;
 			children = (
-				49C426CE1555241F00CBB587 /* test_suite.h */,
-				49C426CF1555244500CBB587 /* compact_list.cpp */,
 				49C426CB15551BAA00CBB587 /* main.cpp */,
 			);
 			path = TestSuite;
+			sourceTree = "<group>";
+		};
+		49C426EB155657EB00CBB587 /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				49C426EE1556582200CBB587 /* CompactList_unit_tests.cpp */,
+				49C426EC155657EB00CBB587 /* FString_unit_tests.cpp */,
+				49C426ED155657EB00CBB587 /* UniTest_unit_tests.cpp */,
+			);
+			path = "Unit Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +224,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				49C426B5155514D700CBB587 /* version.cpp in Sources */,
+				49C426DE1556079C00CBB587 /* UnitTest.cpp in Sources */,
+				49C426E315561C9900CBB587 /* FString.cpp in Sources */,
+				49C426EF1556582200CBB587 /* CompactList_unit_tests.cpp in Sources */,
+				49C426F01556588400CBB587 /* FString_unit_tests.cpp in Sources */,
+				49C426F11556588800CBB587 /* UniTest_unit_tests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				49C426CD15551BE700CBB587 /* main.cpp in Sources */,
-				49C426D1155524AA00CBB587 /* compact_list.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +296,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					BL_ENABLE_UNIT_TESTS,
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -272,6 +309,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = BL_ENABLE_UNIT_TESTS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -279,6 +317,11 @@
 		49C426C915551B9B00CBB587 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					BL_ENABLE_UNIT_TESTS,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -286,6 +329,7 @@
 		49C426CA15551B9B00CBB587 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = BL_ENABLE_UNIT_TESTS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -309,6 +353,7 @@
 				49C426B01555149300CBB587 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49C426C815551B9B00CBB587 /* Build configuration list for PBXNativeTarget "bl_test_suite" */ = {
 			isa = XCConfigurationList;
@@ -317,6 +362,7 @@
 				49C426CA15551B9B00CBB587 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

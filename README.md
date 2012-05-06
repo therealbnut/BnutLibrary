@@ -1,4 +1,4 @@
 BnutLibrary
 ===========
 
-A collection of C++ utility classes, for game development.
+A collection of C++ utility classes.

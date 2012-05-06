@@ -9,6 +9,7 @@
 #ifndef BnutLibrary_CompactList_h
 #define BnutLibrary_CompactList_h
 
+#include <BL/UnitTest.h>
 #include <BL/impl/CompactList_impl.h>
 
 namespace BL
@@ -36,6 +37,8 @@ namespace BL
         inline size_t capacity(void) const {return this->_capacity();}
 
         inline void report(void) const {return this->_report();}
+
+        BLDefineUnitTest("Compact List");
     };
 }
 

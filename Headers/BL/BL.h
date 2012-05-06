@@ -10,6 +10,8 @@
 #define BnutLibrary_BL_h
 
 #include <BL/CompactList.h>
+#include <BL/FString.h>
+#include <BL/UnitTest.h>
 
 namespace BL
 {
